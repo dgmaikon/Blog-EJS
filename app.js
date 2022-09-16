@@ -21,7 +21,8 @@ app.use(express.static("public"));
 app.get("/", function(req, res) {
   
     res.render("home", {
-      homeStart: homeStartingContent
+      homeStart: homeStartingContent,
+      posts: posts
     });
   
 });
@@ -50,14 +51,12 @@ app.get("/compose", function(req, res) {
 app.post("/compose", function(req, res) {
 
   const post = 
-    {inputTitle: req.body.inputTitle, 
-    inputPost: req.body.inputPost  
+    {inputTitle: req.body.inputTitle,
+    inputPost: req.body.inputPost
   };
 
   posts.push(post);
   res.redirect("/");
-  console.log(posts);
-
 });
 
 app.listen(3000, function() {
