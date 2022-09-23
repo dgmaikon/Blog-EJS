@@ -6,7 +6,10 @@
 <%  posts.forEach(function(arrayItem) { %>
 
     <h1><%= arrayItem.inputTitle; %></h1>
-    <p><%= arrayItem.inputPost.substring(0,100) + "..."; %></p>
+    <p>
+        <%= arrayItem.inputPost.substring(0,100) + "..."; %>
+        <a href="/posts/<%= arrayItem.inputTitle %>">Read More</a>
+    </p>
 
 <% }); %>
 
