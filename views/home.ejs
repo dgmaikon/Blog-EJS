@@ -6,7 +6,7 @@
 <%  posts.forEach(function(arrayItem) { %>
 
     <h1><%= arrayItem.inputTitle; %></h1>
-    <p><%= arrayItem.inputPost; %></p>
+    <p><%= arrayItem.inputPost.substring(0,100) + "..."; %></p>
 
 <% }); %>
 
